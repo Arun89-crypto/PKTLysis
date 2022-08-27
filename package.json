@@ -1,0 +1,41 @@
+{
+    "name": "pktlysis",
+    "version": "1.0.0",
+    "description": "Software to analyse Network Requests and the json/body of the API's in a Web Application",
+    "main": "lib/index.js",
+    "types": "lib/index.d.ts",
+    "scripts": {
+        "test": "jest --config jestconfig.json",
+        "build": "tsc",
+        "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+        "lint": "tslint -p tsconfig.json",
+        "prepare": "npm run build",
+        "prepublishOnly": "npm test && npm run lint",
+        "preversion": "npm run lint",
+        "version": "npm run format && git add -A src",
+        "postversion": "git push && git push --tags"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Arun89-crypto/PKTLysis.git"
+    },
+    "keywords": [],
+    "files": [
+        "lib /**/*"
+    ],
+    "author": "V1K1NG3",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Arun89-crypto/PKTLysis/issues"
+    },
+    "homepage": "https://github.com/Arun89-crypto/PKTLysis#readme",
+    "devDependencies": {
+        "@types/jest": "^28.1.8",
+        "jest": "^28.1.3",
+        "prettier": "^2.7.1",
+        "ts-jest": "^28.0.8",
+        "tslint": "^6.1.3",
+        "tslint-config-prettier": "^1.18.0",
+        "typescript": "^4.8.2"
+    }
+}
